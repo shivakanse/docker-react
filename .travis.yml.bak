@@ -4,3 +4,6 @@ services:
  
  before-install:
   - docker build -t shivakanse/docker-react -f Dockerfile.dev .
+  
+ script:
+  - docker run shivakanse/docker-react npm run test -- --coverage
